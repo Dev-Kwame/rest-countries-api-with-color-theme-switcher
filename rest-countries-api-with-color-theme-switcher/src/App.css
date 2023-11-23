@@ -323,6 +323,8 @@ input[type=text]{
    font-weight: lighter;
    font-family: var(--var-font-family);
    margin-left: 50px;
+   margin-top: 70px;
+   margin-bottom: 50px;
 
 
 }
