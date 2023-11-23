@@ -17,7 +17,7 @@ function App () {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const [searchCountry, setSearchCountry] = useState<string>('');
-   
+
     
 
  
@@ -34,6 +34,7 @@ function App () {
       setSelectedRegion(region);
     };   
 
+
   return (
     <div className={`App ${isDarkMode ? 'dark' : 'light'}`}> 
     <div className='header'>
@@ -41,36 +42,24 @@ function App () {
     <div className="click-button"><ToggleButton isDarkMode={isDarkMode} onToggle={toggleTheme}/></div> 
     </div>
 
-    <div  className="flex">
-    
-       
-      <div>
-     <SearchBar isDarkMode={isDarkMode} onSearch={setSearchCountry}/>
-      </div>
-    <div className="dropdown-flex">
-     <DropDown isDarkMode={isDarkMode}  onRegionSelect={handleRegionSelect} />
-      </div>
-     
-    
-    </div>
-    <div>
-   
     <Router>
-      <Routes>
-        <Route path='/' element={<CountryList isDarkMode={isDarkMode} selectedRegion={selectedRegion} searchCountry={searchCountry} />} />
-        <Route  path='/country/:countryName' element={<CountryDetails  isDarkmode />}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={
+            <div>
+              <div className="flex">
+                <div>
+                  <SearchBar isDarkMode={isDarkMode} onSearch={setSearchCountry} />
+                </div>
+                <div className="dropdown-flex">
+                  <DropDown isDarkMode={isDarkMode} onRegionSelect={handleRegionSelect} />
+                </div>
+              </div>
+              <CountryList isDarkMode={isDarkMode} selectedRegion={selectedRegion} searchCountry={searchCountry} />
+            </div>
+          } />
+          <Route path='/country/:countryName' element={<CountryDetails isDarkmode />} />
+        </Routes>
       </Router>
-       
- 
-     
- 
-      
-  
-    
-       
-    
-    </div>
      </div>
      
     
