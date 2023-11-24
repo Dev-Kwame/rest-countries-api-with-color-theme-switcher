@@ -57,7 +57,7 @@ function App () {
               <CountryList isDarkMode={isDarkMode} selectedRegion={selectedRegion} searchCountry={searchCountry} />
             </div>
           } />
-          <Route path='/country/:countryName' element={<CountryDetails isDarkmode />} />
+          <Route path='/country/:countryName' element={<CountryDetails isDarkMode={isDarkMode} />} />
         </Routes>
       </Router>
      </div>
