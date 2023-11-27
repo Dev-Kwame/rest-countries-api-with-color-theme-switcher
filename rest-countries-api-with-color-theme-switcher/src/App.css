@@ -339,15 +339,15 @@ input[type=text]{
   
 
 #flag{
-   width: 560px;
-   height: 401px;
+   width: 500px;
+   height: 100%;
    border-radius: 5px;
    object-fit: contain;
 }
 .country-details-wrapper{
   display: flex;
   justify-content: space-between;
-  gap: 200px;
+  gap: 150px;
   
    
 }
@@ -357,7 +357,7 @@ input[type=text]{
 
 .country-details{
   display: flex;
-  gap: 90px;
+  gap: 50px;
   margin-left: 50px;
   margin-right: 50px;
  
@@ -378,6 +378,32 @@ article span{
   font-weight: 600;
 }
 
+.border-button{
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-style: none;
+  border-radius: 2px;
+  background-color: var(--var-Light-Mode-Elements);
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1049);
+  cursor: pointer;
+  font-family: var(--var-font-family);
+  font-size: var(--var-homepagetext) ;
+  text-align: center;
+  color: var(--var-Light-Mode-Text);
+  
+}
+.dark .border-button{
+  color: var(--var-Dark-Mode-Text);
+  background-color: var(--var-Dark-Mode-Elements);
+  box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1049);
+  border-radius: 2px;
+}
+.light .border-button{
+  color: var(--var-Light-Mode-Text);
+  background-color: var(--var-Light-Mode-Elements);
+  border-radius: 2px;
+}
 
 
 /* query for mobile devices*/
