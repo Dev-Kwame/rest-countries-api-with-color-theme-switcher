@@ -35,9 +35,9 @@ Your users should be able to:
 ### Links
 
 ### Built with
-CSS
-React JS
-Typescript
+-CSS
+-React JS
+-Typescript
 
 ### What I learned
 I learned how to fetch data from API, also learnt the use of several react hooks, apart from the widely used useState and useEffect. Other ones like useNavigate, useHistory , useParams
