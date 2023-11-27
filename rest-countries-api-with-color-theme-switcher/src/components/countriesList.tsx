@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom';
         region: string;
         capital: string;
         subregion: string;
-        borders: string;
+        borders: string[];
         tld: string;
         languages: {
           [key: string]: string;
@@ -34,10 +34,13 @@ import { Link } from 'react-router-dom';
             name: string;
           
           };
-        }[];
+        };
+       cca3: string;
+      
+ }
        
       
-        }
+        
         
 
    
@@ -55,7 +58,7 @@ import { Link } from 'react-router-dom';
       
   const CountryList: React.FC<CountryListProps> = ({isDarkMode, selectedRegion,searchCountry}) => {
     const [countries, setCountries] = useState<Country[]>([]);
-   
+    
   
    
   useEffect(() => {
@@ -65,8 +68,12 @@ import { Link } from 'react-router-dom';
         const data = await response.json();
         console.log('Data from API:', data);
         setCountries(data);
+
+        
       } catch (error) {
         console.error('Error fetching data:', error);
+        
+
       }
     };
 
