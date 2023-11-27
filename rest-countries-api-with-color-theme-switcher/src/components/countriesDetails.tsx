@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import {useParams, Link} from 'react-router-dom';
-import { Country} from './countriesList'
+import { Country} from './countriesList';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
@@ -24,6 +24,7 @@ const CountryDetails: React.FC<CountryDetailsprops> = ({isDarkMode, }) => {
   
   //Fetching country details from RESTFUL API
   useEffect(() => {
+    
     const fetchData = async () => {
       try {
         const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
