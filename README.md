@@ -31,6 +31,9 @@ Your users should be able to:
 7. Toggle the colour scheme between light and dark mode
 
 ### Screenshot
+![country details](rest-countries-api-with-color-theme-switcher/public/country_Ghana.png)
+![country list](rest-countries-api-with-color-theme-switcher/public/country_list.png)
+
 
 ### Links
 
