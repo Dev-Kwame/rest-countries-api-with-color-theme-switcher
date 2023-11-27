@@ -57,7 +57,7 @@ https://www.youtube.com/results?search_query=importing+api+into+your++react+proj
 https://stackoverflow.com/ - Encountered several errors , developers helped solve these errors
 
 ### Author
-GitHub -
+GitHub - https://github.com/Dev-Kwame/
 
 ### Acknowledgments
 I would like to acknowlegde my mentor for guiding me through this react journey
