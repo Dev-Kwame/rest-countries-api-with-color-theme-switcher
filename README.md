@@ -36,6 +36,9 @@ Your users should be able to:
 
 
 ### Links
+- Solution URL: https://github.com/Dev-Kwame/rest-countries-api-with-color-theme-switcher
+- Live Site URL: https://rest-countriesapi-with-color-theme.netlify.app/
+
 
 ### Built with
   - CSS
@@ -47,10 +50,14 @@ Your users should be able to:
 I learned how to fetch data from API, also learnt the use of several react hooks, apart from the widely used useState and useEffect. Other ones like useNavigate, useHistory , useParams
 
 ### Continued development
+I would like to continue of the use of numerous react hooks , also more ways to fetch data from API's
 
 ### Useful resources
+https://www.youtube.com/results?search_query=importing+api+into+your++react+project - Helped my understanding of API's
+https://stackoverflow.com/ - Encountered several errors , developers helped solve these errors
 
 ### Author
+GitHub -
 
 ### Acknowledgments
 I would like to acknowlegde my mentor for guiding me through this react journey
