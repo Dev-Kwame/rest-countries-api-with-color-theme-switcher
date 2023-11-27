@@ -18,7 +18,8 @@ This is an application that gives you deatils on countries around the world like
 
 
 
-### Screenshot
+### Overview
+### The Challenge
 The challenge is to integrate with the REST Countries V2 API to pull country data and display it like in the designs . You are required to use the React + TypeScript front-end framework.
 Your users should be able to:
 1. View the optimal layout for the site depending on their device's screen size
