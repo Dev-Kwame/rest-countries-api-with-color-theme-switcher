@@ -1,6 +1,6 @@
 import React, {FC,ChangeEvent } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
+import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -8,9 +8,6 @@ import {faMagnifyingGlass} from '@fortawesome/free-solid-svg-icons'
 interface SearchBarProps{
     isDarkMode: boolean
     onSearch: (searchCountry: string) => void;
-
-    
-
    
    
 }

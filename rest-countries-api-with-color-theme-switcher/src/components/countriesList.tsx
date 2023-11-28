@@ -101,11 +101,12 @@ import { Link } from 'react-router-dom';
       <ul className='country-grid'>
      
             {filteredCountries.map((country) =>(
+              
               <Link className='text' key={country.name.common} to={`/country/${encodeURIComponent(country.name.common)} `} >
-              <div key={country.name.common }className={`countryItem ${isDarkMode ? 'dark' : 'light'}`}>
+              <div key={country.capital }className={`countryItem ${isDarkMode ? 'dark' : 'light'}`}>
             <img src={country.flags.png} alt="Flag" className='countryImg'/>
              <li id='country-name'>{country.name.common}</li>
-              <li><span>Population: </span>{country.population}</li>
+              <li><span>Population: </span>{country.population.toLocaleString()}</li>
               <li><span>Region:</span> {country.region}</li>
               <li><span>Capital: </span>{country.capital}</li>  
               
