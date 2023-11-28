@@ -53,8 +53,8 @@ I learned how to fetch data from API, also learnt the use of several react hooks
 I would like to continue of the use of numerous react hooks , also more ways to fetch data from API's
 
 ### Useful resources
-https://www.youtube.com/results?search_query=importing+api+into+your++react+project - Helped my understanding of API's
-https://stackoverflow.com/ - Encountered several errors , developers helped solve these errors
+- https://www.youtube.com/results?search_query=importing+api+into+your++react+project - Helped my understanding of API's
+- https://stackoverflow.com/ - Encountered several errors , developers helped solve these errors
 
 ### Author
 GitHub - https://github.com/Dev-Kwame/
