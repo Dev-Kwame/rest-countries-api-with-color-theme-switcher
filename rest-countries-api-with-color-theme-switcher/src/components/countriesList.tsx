@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 
 
+
  export interface Country {
     name: {
     common: string;
@@ -58,8 +59,7 @@ import { Link } from 'react-router-dom';
       
   const CountryList: React.FC<CountryListProps> = ({isDarkMode, selectedRegion,searchCountry}) => {
     const [countries, setCountries] = useState<Country[]>([]);
-    
-  
+
    
   useEffect(() => {
     const fetchData = async () => {
@@ -90,6 +90,7 @@ import { Link } from 'react-router-dom';
     return matchesRegion && matchesSearchCountry;
   });
 
+
  
   
 
@@ -102,7 +103,9 @@ import { Link } from 'react-router-dom';
      
             {filteredCountries.map((country) =>(
               
-              <Link className='text' key={country.name.common} to={`/country/${encodeURIComponent(country.name.common)} `} >
+              <Link className='text' key={country.name.common} to={{
+                pathname: `/country/${encodeURIComponent(country.name.common)}`
+              }} >
               <div key={country.capital }className={`countryItem ${isDarkMode ? 'dark' : 'light'}`}>
             <img src={country.flags.png} alt="Flag" className='countryImg'/>
              <li id='country-name'>{country.name.common}</li>
