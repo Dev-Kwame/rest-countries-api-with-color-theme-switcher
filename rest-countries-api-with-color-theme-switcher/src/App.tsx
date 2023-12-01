@@ -1,5 +1,5 @@
 
-import {BrowserRouter as Router, Routes, Route,  } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import React, {useState, useEffect} from "react";
 import NavBar from "./components/navBar";
 import './App.css';
@@ -7,9 +7,50 @@ import SearchBar from "./components/searchbar";
 import ToggleButton from "./components/button";
 import DropDown from "./components/dropDown";
 import CountryList from "./components/countriesList";
-import CountryDetails from "./components/countriesDetails";
+import CountryDetails from './components/countriesDetails';
 
 
+
+
+
+export interface Country {
+  name: {
+  common: string;
+  nativeName: {
+    [key: string]: {
+      official: string;
+      common: string;
+    };
+  };
+ 
+};
+
+      flags: {
+          svg: string;
+          png: string;
+        };
+     
+      population: number;
+      region: string;
+      capital: string;
+      subregion: string;
+      borders: string[];
+      tld: string;
+      languages: {
+        [key: string]: string;
+      };
+      currencies: {
+        [key: string]: {
+          name: string;
+        
+        };
+      };
+      cca3: string;
+      
+      
+     
+    
+}
 
 
 
@@ -17,8 +58,36 @@ function App () {
     const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const [searchCountry, setSearchCountry] = useState<string>('');
-
+    const [countries, setCountries] = useState<Country[]>([]);
     
+ 
+
+  
+
+   
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://restcountries.com/v3.1/all');
+        const data = await response.json();
+     
+        setCountries(data);
+      
+    
+        
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+      
+    };
+
+    fetchData();
+  }, []);
+
+
+
+
+
 
  
 
@@ -54,10 +123,11 @@ function App () {
                   <DropDown isDarkMode={isDarkMode} onRegionSelect={handleRegionSelect} />
                 </div>
               </div>
-              <CountryList isDarkMode={isDarkMode} selectedRegion={selectedRegion} searchCountry={searchCountry} />
+              <CountryList isDarkMode={isDarkMode} selectedRegion={selectedRegion} searchCountry={searchCountry}  countries={countries}/>
+              
             </div>
           } />
-          <Route path='/country/:countryName' element={<CountryDetails isDarkMode={isDarkMode} />} />
+          <Route path='/country/:countryName' element={<CountryDetails isDarkMode={isDarkMode}  countries={countries}/> } />
         </Routes>
       </Router>
      </div>
@@ -69,5 +139,6 @@ function App () {
    
   );
 }
+
 
 export default App;
