@@ -30,9 +30,7 @@ import { Country } from '../App';
  
   
   const filteredCountries = countries.filter((country) => {
-    const matchesRegion = selectedRegion && selectedRegion !== 'all'
-      ? country.region === selectedRegion
-      : true;
+    const matchesRegion = selectedRegion && selectedRegion !== 'all' ? country.region === selectedRegion : true;
 
     const matchesSearchCountry = country.name.common.toLowerCase().includes(searchCountry.toLowerCase());
 
