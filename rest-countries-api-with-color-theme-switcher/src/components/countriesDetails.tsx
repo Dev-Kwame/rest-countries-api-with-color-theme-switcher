@@ -35,12 +35,6 @@ const CountryDetails: React.FC<CountryDetailsprops> = ({isDarkMode, countries}) 
   
 
 
-
-
-
-
-
-
    // Find the selected country based on 'countryName'
    const decodedCountryName = decodeURIComponent(countryName || ''); // Default to an empty string if countryName is undefined
  
@@ -49,8 +43,6 @@ const CountryDetails: React.FC<CountryDetailsprops> = ({isDarkMode, countries}) 
   
 
    if (selectedCountry) {
-     // Now you can safely use selectedCountry
-     // Rest of your code handling the selected country
    } else {
      console.error('Country not found');
    }
@@ -59,7 +51,7 @@ const CountryDetails: React.FC<CountryDetailsprops> = ({isDarkMode, countries}) 
    }
   
   
-// Add this function inside your component or outside if you prefer
+
 const getFullNameByCode = (code: string, countries: Country[]) => {
   const country = countries.find((c) => c.cca3 === code);
   return country ? country.name.common : code;
