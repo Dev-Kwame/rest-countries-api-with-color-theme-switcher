@@ -60,9 +60,15 @@ body{
 .flex{
   display: flex;
   justify-content: space-between;
+  place-items: center;
   margin: 50px;
+
+
  
 }
+
+
+
 
 /* Light Theme Styles */
 .light-theme{
@@ -180,6 +186,12 @@ input[type=text]{
 }
 
 
+.country-grid{
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+  flex-wrap: wrap;
+}
 
 .countrySearch{
   border-radius: 5px;
@@ -271,23 +283,15 @@ input[type=text]{
   list-style: none;
   font-size: var(--var-homepagetext);
   padding-left: 15px;
-  padding-bottom: 10px;
-
-  
-  
+  padding-bottom: 10px; 
 }
+
 
 .country-card span{
   font-weight: 700;
 
 }
-.country-grid{
-  display: grid;
-  grid-template-columns: repeat(4, 0.03fr);
-  justify-content: center;
-  place-items: center;
-  gap: 64px;
-}
+
   
 .countryItem{
   width: 264px;
@@ -482,8 +486,7 @@ input[type=text]{
 }
 .continent-list button{
   font-size: 12px;
-  
-  
+   
 }
 .country-grid{
   display: flex;
@@ -495,6 +498,7 @@ input[type=text]{
   gap: 10px;
  
 }
+
 .countryItem{
   margin-bottom: 50px;  
    
@@ -532,6 +536,9 @@ input[type=text]{
 .article h2{
   margin-top: 20px;
 }
+.country-list{
+  margin: 0%;
+}
 .country-details-1 p{
   padding-top: 10px;
 
@@ -544,7 +551,33 @@ input[type=text]{
   justify-content: center;
 }
 
+.light .theme-button-text{
+  color: var(--var-Light-Mode-Text);
 }
+
+}
+
+
+/*media query for screen sizes larger than 1440px*/
+@media screen and (min-width: 1440px){
+  .country-grid{
+    gap: 92px;
+  }
+  
+}
+
+  
+
+
+
+
+
+
+
+
+
+  
+ 
 
 
 
