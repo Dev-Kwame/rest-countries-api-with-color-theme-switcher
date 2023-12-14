@@ -56,6 +56,7 @@ const getFullNameByCode = (code: string, countries: Country[]) => {
   const country = countries.find((c) => c.cca3 === code);
   return country ? country.name.common : code;
 };
+ 
 
 const handleBorderClick = (borderCode: string) => {
   const borderCountry = countries.find((country) => country.cca3 === borderCode);
