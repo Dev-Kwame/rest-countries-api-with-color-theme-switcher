@@ -34,6 +34,9 @@ const DropDown: FC<DropDownProps> = ({isDarkMode, onRegionSelect}) => {
             </button></div>
             {open ? (<ul className='continent-list'>
                 <li className='continent'>
+                    <button className={`theme-button-text ${isDarkMode ? 'dark' : 'light'}`}  onClick={() => handleRegionSelect('')}>All</button>
+                </li>
+                <li className='continent'>
                     <button className={`theme-button-text ${isDarkMode ? 'dark' : 'light'}`}  onClick={() => handleRegionSelect('Africa')}>Africa</button>
                 </li>
                 <li className='continent'>
