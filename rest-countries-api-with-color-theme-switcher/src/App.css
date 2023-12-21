@@ -249,7 +249,7 @@ input[type=text]{
   border-radius: 5px;
   width: 200px;
   height: 170px;
-  padding-top: 10px;
+  padding-top: 5px;
   position: absolute;
   
   
@@ -453,15 +453,7 @@ article span{
  
 }
 
-.continent-list{
-  width: 200px;
-  height: 144px;
-  font-size: 12px;
-  padding-top: 10px;
-  padding-bottom: 7px;
-  
-  
-}
+
 input[type=text]{
   font-size: 12px;
 }
@@ -481,8 +473,8 @@ input[type=text]{
   margin-left:  -141px;
 }
 .continent-list{
-  height: 144px;
-  padding-top: 5px;
+
+  padding-top: 2px;
 }
 .continent-list button{
   font-size: 12px;
@@ -563,6 +555,15 @@ input[type=text]{
   .country-grid{
     gap: 92px;
   }
+  
+}
+
+@media screen and (min-width: 745px){
+  .country-grid{
+    gap: 62px;
+    flex-wrap: wrap;
+  }
+  
   
 }
 
